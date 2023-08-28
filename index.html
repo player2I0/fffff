@@ -1,1 +1,230 @@
-<p>bjuhh</p>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap" rel="stylesheet">
+    <style>
+      #map {
+        position: absolute; 
+        left: 0; 
+        top: 0; 
+        margin-left: auto; 
+        margin-right: auto; 
+        width: 100vw;
+        height: 100vh;/* Need a specific value to work */
+        z-index: 20;
+      }
+      .titleimg {
+        position:fixed;
+        bottom:0px;
+        left: 0;
+      }
+      .logo {
+        position:fixed;
+        bottom:60%;
+        left: 718px;
+      }
+      .logo-subtext {
+        position: relative;
+        top: 43%;
+        transform: translateY(-50%);
+
+        text-align: center;
+        font-family: 'Philosopher', sans-serif;
+        color: #0f2a3f;
+        -webkit-text-fill-color:  #ad9192;
+        -webkit-text-stroke: 3px;
+        font-size: 60px;
+
+      }
+      .menu-option {
+        position: relative;
+        top: 40%;
+        transform: translateY(-50%);
+
+        text-align: center;
+        font-family: 'Philosopher', sans-serif;
+        color: #0f2a3f;
+        -webkit-text-fill-color:  #997577;
+        -webkit-text-stroke: 3px;
+        font-size: 54px;
+        cursor: pointer;
+        line-height: 0.7;
+
+      }
+      .menu-option:hover {
+        -webkit-text-fill-color:  #f6d6bd;
+      }
+      body {
+        margin: 0;
+      }
+
+      .scroll {
+        position: absolute;
+        width: 100vw;
+        background-color: $boxify-bg-light-dark;
+        overflow: hidden;
+        z-index: 1;
+        margin: 0;
+        padding: 0;
+      }
+
+      .m-scroll {
+        overflow: hidden;
+        height: 100%;
+        white-space: nowrap;
+        animation: scrollText 100s infinite linear;
+        margin: 0;
+        font-size: 0;
+        display: flex;
+        justify-content: space-between;
+        width: fit-content;
+      }
+      .m-scroll2 {
+        overflow: hidden;
+        height: 100%;
+        white-space: nowrap;
+        animation: scrollText 140s infinite linear;
+        margin: 0;
+        font-size: 0;
+        display: flex;
+        justify-content: space-between;
+        width: fit-content;
+      }
+      .m-scroll3 {
+        overflow: hidden;
+        height: 100%;
+        white-space: nowrap;
+        animation: scrollText 180s infinite linear;
+        margin: 0;
+        font-size: 0;
+        display: flex;
+        justify-content: space-between;
+        width: fit-content;
+      }
+      .m-scroll4 {
+        overflow: hidden;
+        height: 100%;
+        white-space: nowrap;
+        animation: scrollText 240s infinite linear;
+        margin: 0;
+        font-size: 0;
+        display: flex;
+        justify-content: space-between;
+        width: fit-content;
+      }
+      .m-scroll5 {
+        overflow: hidden;
+        height: 100%;
+        white-space: nowrap;
+        animation: scrollText 240s infinite linear;
+        margin: 0;
+        font-size: 0;
+        display: flex;
+        justify-content: space-between;
+        width: fit-content;
+      }
+
+      .sp {
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+      }
+
+      @keyframes scrollText {
+        from {
+          transform: translateX(0%);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
+      .map-elem {
+        padding: 5px;
+        background-color: #0f2a3f;
+        display: block;
+      }
+      .map-elem h2 {
+        font-family: 'Philosopher', sans-serif;
+        color: #997577;
+      }
+
+    </style>
+    <script>
+      var t = {};
+
+      fetch('https://roadwarden.mctmvk.ru/file_stats')
+      .then(response => response.json())
+      .then(commits => alert(commits));
+
+
+      console.log(t)
+
+    </script>
+    
+  </head>
+  <body style="overflow: hidden;">
+    
+    <div class="scroll" style="z-index: 5;">
+      <div class="m-scroll5">
+        <span class="sp"><img src="img/layer6.png" alt="альтернативный текст"></span>
+      </div>
+    </div>
+    <div class="scroll" style="z-index: 6;">
+      <div class="m-scroll4">
+        <span class="sp"><img src="img/layer5.png" alt="альтернативный текст"></span>
+      </div>
+    </div>
+    <div class="scroll" style="z-index: 7;">
+      <div class="m-scroll3">
+        <span class="sp"><img src="img/layer4.png" alt="альтернативный текст"></span>
+      </div>
+    </div>
+    <div class="scroll" style="z-index: 8;">
+      <div class="m-scroll2">
+        <span class="sp"><img src="img/layer3.png" alt="альтернативный текст"></span>
+      </div>
+    </div>
+    <div class="scroll" style="z-index: 9;">
+      <div class="m-scroll">
+        <span class="sp"><img src="img/layer2.png" alt="альтернативный текст"></span>
+      </div>
+    </div>
+    
+    <img style="z-index: 10;" class="titleimg" src="img/layer1.png" alt="альтернативный текст">
+    <img style="z-index: 11;" class="logo" src="img/logo.png" alt="альтернативный текст">
+    <h1 style="z-index: 12;" class="logo-subtext">Перевод</h1>
+    <br style="line-height: 0.5;">
+    <h1 style="z-index: 13;" class="menu-option" onclick="document.getElementById('map').style = 'visibility: visible; opacity: 1; transition: opacity 0.6s, visibility 0.6s;'">Карта</h1>
+    <h1 style="z-index: 14;" class="menu-option" style="">Тестовые билды</h1>
+    
+    <div id="map" style="visibility: hidden;opacity: 0;transition: opacity 0.3s, visibility 0.3s;">
+      <img src="img/game_menu.png" style="z-index: 21;" alt="альтернативный текст">
+      <div style="position: absolute; top: 0; left: 0; width: 100vw; overflow-y: auto;">
+        <h1 style="z-index: 13; top: 0 !important;" class="logo-subtext">Карта перевода</h1>
+        <div class="map-elem">
+          <p style="float: left; text-align: center; ">
+            <img src="img/map/tuliacamp.png" style="margin-top: -6px;" alt="альтернативный текст">
+          </p>
+          <progress value="0" max="100" style="float: right; margin-top: 35px; width: 50%; margin-right: 10px;">70 %</progress>
+          <h2 style="float:right; color: #f6d6bd; margin-right: 10px; margin-top: 30px;">0%  </h2>
+          <h2 style="margin-left: 10px;">Лагерь Тулии  <br><span style="color: gray; font-size: 16px;">Tulia's Camp</span></h2>
+          
+        </div>
+        <br>
+        <div class="map-elem">
+          <p style="float: left; text-align: center; ">
+            <img src="img/map/crossroads.png" style="margin-top: -6px;" alt="альтернативный текст">
+          </p>
+          <progress value="0" max="100" style="float: right; margin-top: 35px; width: 50%; margin-right: 10px;">70 %</progress>
+          <h2 style="float:right; color: #f6d6bd; margin-right: 10px; margin-top: 30px;">0%  </h2>
+          <h2 style="margin-left: 10px;">Южное перепутье <br><span style="color: gray; font-size: 16px;">Southern crossroads</span></h2>
+          
+        </div>
+        <br>
+        <h1 style="z-index: 13; top: 80%;" class="menu-option" onclick="document.getElementById('map').style = 'visibility: hidden;opacity: 0;transition: opacity 0.6s, visibility 0.6s;'">Назад</h1>
+      </div>
+    </div>
+    
+  </body>
+</html>
